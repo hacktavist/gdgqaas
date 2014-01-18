@@ -3,10 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Random Quote</title>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
 </head>
-<body>
-  <div>
-    <h1><%=quote%></h1>
+<body style="margin-top:40px;">
+  <div class="container">
+    <div id="view" view="">
+      <div class="hero-unit">
+        <h1><%=quote%></h1>
+        <p><em>- <%=name.capitalize%></em></p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
