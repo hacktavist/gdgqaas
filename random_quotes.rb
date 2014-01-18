@@ -19,7 +19,7 @@ def quote_gen(name)
   if(name == "nic")
     quote = nic_quote_array.sample;
   elsif (name == "ben")
-    quote = sample ben_quote_array.sample;
+    quote = ben_quote_array.sample;
   elsif (name == "rick")
     quote = rick_quote_array.sample;
   elsif (name == "mcgraw")
@@ -39,7 +39,7 @@ end
 
 ###info route###
 get '/' do
-  "Enter a name of an employee after the forward slash to see a random quote from the person";
+  erb :index;
 end
 
 
@@ -47,5 +47,7 @@ end
 
 get '/:name' do
   rand_quote = quote_gen(params[:name]);
-  erb :quote, :locals => {:quote => rand_quote}
+  erb :quote, :locals => {:quote => rand_quote,
+                          :name => params[:name]
+                         }
 end
