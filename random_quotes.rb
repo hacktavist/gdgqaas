@@ -16,19 +16,19 @@ def quote_gen(name)
   name = name.downcase;
 
 
-  if(name == "nic")
+  if(name.include? "nic")
     quote = nic_quote_array.sample;
-  elsif (name == "ben")
+  elsif (name.include? "ben")
     quote = ben_quote_array.sample;
-  elsif (name == "rick")
+  elsif (name.include? "rick")
     quote = rick_quote_array.sample;
-  elsif (name == "mcgraw")
+  elsif (name.include? "mcgraw")
     quote = mcg_quote_array.sample;
-  elsif (name == "brandon")
+  elsif (name.include? "brandon")
     quote = brandon_quote_array.sample;
-  elsif (name == "keith")
+  elsif (name.include? "keith")
     quote = keith_quote_array.sample;
-  elsif (name == "mike")
+  elsif (name.include? "mike")
     quote = mike_quote_array.sample;
   else
     quote = "That beeotch don't work here";
